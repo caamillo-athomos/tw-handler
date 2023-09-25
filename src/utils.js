@@ -23,9 +23,7 @@ const getPixelValue = (pixels) =>
  * @returns { String } normalized breakpoints
  */
 const normalizeBreakpoints = (breakpoints) => 
-        Object.keys(breakpoints)
-            .filter(key => !(key.includes('letter-spacing') || key.includes('line-height')))
-            .join(',')
+        Object.keys(breakpoints).join(',')
 
 module.exports = {
     sortBreakpoints,
