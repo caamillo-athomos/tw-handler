@@ -2,7 +2,7 @@
   "name": "example1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "tailwind.config.js",
   "scripts": {
     "tw-watch": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch"
   },

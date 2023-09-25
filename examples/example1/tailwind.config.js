@@ -1,9 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+const twHandler = require('../../src/main')
+
 module.exports = {
   content: ['./*.html'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    twHandler
+  ],
 }
-
