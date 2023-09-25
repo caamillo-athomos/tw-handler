@@ -17,16 +17,7 @@ const sortBreakpoints = (breakpoints) => Object.fromEntries(
 const getPixelValue = (pixels) =>
         parseInt(pixels.split('px')[0])
 
-/**
- * Normalizes breakpoints into a string-list (for CSS vars)
- * @param { Object } breakpoints - tailwind breakpoints
- * @returns { String } normalized breakpoints
- */
-const normalizeBreakpoints = (breakpoints) => 
-        Object.keys(breakpoints).join(',')
-
 module.exports = {
     sortBreakpoints,
-    getPixelValue,
-    normalizeBreakpoints
+    getPixelValue
 }

@@ -1,6 +1,5 @@
 const {
-    sortBreakpoints,
-    normalizeBreakpoints
+    sortBreakpoints
 } = require('./utils')
 
 const plugin = require('tailwindcss/plugin')
@@ -52,6 +51,6 @@ module.exports = plugin(({ addComponents, theme, config }) => {
 
     for (let screen of Object.keys(screens)) 
         root[`--${ TW_PREFIX }screen-${ screen }`] = screens[screen] // Write all screens
-    root[`--${ TW_PREFIX }screens`] = normalizeBreakpoints(screens) // Write screens 'array'
+    root[`--${ TW_PREFIX }screens`] = Object.keys(screens).join(',') // Write screens 'array'
     addComponents({ ':root': root })
 })
